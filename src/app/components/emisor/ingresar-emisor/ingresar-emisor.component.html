@@ -1,0 +1,35 @@
+<div class="body">
+    <div class="container">
+        <mat-toolbar>
+            <span>Crear Emisor</span>
+        </mat-toolbar>
+      
+            <form [formGroup]="formularioEmisor" (ngSubmit)="enviarDatos()" >
+                <mat-form-field appearance="fill">
+                    <mat-label>Identificacion</mat-label>
+                    <input type="text" formControlName="identificacion" matInput>
+                  </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nombres</mat-label>
+                    <input type="text" formControlName="nombres" matInput>
+                  </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Correo</mat-label>
+                    <input type="text" formControlName="correo" matInput>
+                  </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Estado</mat-label>
+                        <mat-select formControlName="estado">
+                        <mat-option value="I">Inactivo</mat-option>
+                        <mat-option value="A">Activo</mat-option>
+                        </mat-select>
+                  </mat-form-field>
+                  <br>
+                  <button type="submit" mat-raised-button class="boton" color="primary" >Ingresar</button>
+            </form>
+       
+    </div>
+
+</div>
+
+
